@@ -1,10 +1,15 @@
-const { name } = require('./package.json');
+// const { name } = require('./package.json');
+const config = require("./data/SiteConfig");
+
+const pathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
 
 module.exports = {
-  pathPrefix: process.env.CI ? `/${name}` : `/`,
+  // pathPrefix: process.env.CI ? `/${name}` : `/`,
+  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    author: 'You!',
-    title: `Gatsby Default (Blog) Starter`,
+    author: 'Samantha Ming',
+    title: `Events Podcast`,
+    site: config,
   },
   plugins: [
     'gatsby-plugin-react-next',
@@ -12,8 +17,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
+        name: 'posts',
+        path: `${__dirname}/content/${config.blogPostDir}`,
       },
     },
     {
