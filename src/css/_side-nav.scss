@@ -1,0 +1,26 @@
+// Parent
+.nav.nav-pills.nav-stacked.side-nav {
+  @media screen and (max-width: $breakpoint-desktop) {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+}
+
+.nav.nav-pills.nav-stacked.side-nav>li {
+  @media screen and (max-width: $breakpoint-desktop) {
+    min-width: 20%;
+    text-align: center;
+    margin: 0 5px;
+  }
+  &>a {
+    text-transform: uppercase;
+    font-family: $font-title;
+    color: #0098DB;
+    border-radius: 2px;
+  }
+  &.active>a {
+    background-color: #0098DB;
+    color: white;
+  }
+}

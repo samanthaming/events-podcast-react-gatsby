@@ -1,0 +1,31 @@
+.about-aside {
+  margin-top: 20px;
+}
+
+.about-aside .well-contact {
+  background: $color-blue;
+  color: white;
+
+  a {
+    color: white;
+
+    &:hover {
+      color: #ccc;
+      border-color:#ccc;
+    }
+  }
+}
+
+.about-aside .well-social {
+  background: $color-teal;
+  color: white;
+  margin-top: 40px;
+
+  a {
+    color: #2157CD;
+
+    &:hover {
+      color: #111;
+    }
+  }
+}

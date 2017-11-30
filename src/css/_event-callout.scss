@@ -1,0 +1,22 @@
+.event-callout {
+  text-align: center;
+  color: $color-blue;
+  margin-top: 30px;
+
+  span {
+    padding-right: 3px;
+  }
+
+  a {
+    font-size: 15px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: block;
+
+    &:hover {
+      text-decoration: none;
+      border-color: #5898d0;
+
+    }
+  }
+}

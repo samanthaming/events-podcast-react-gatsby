@@ -1,0 +1,22 @@
+// ----------------------------------
+// GUEST ASIDE
+// ----------------------------------
+// Guest Image
+.guest-aside .guest-image {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+// Guest Name
+.guest-aside .guest-name {
+  text-align: center;
+}
+
+.guest-aside .guest-event {
+  border-top: 1px solid #e3e3e3;
+  padding-top: 8px;
+  margin-top: 15px;
+  span {
+    color: #888;
+  }
+}

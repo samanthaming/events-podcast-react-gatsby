@@ -1,0 +1,29 @@
+$color-blue: #0098DB;
+$color-teal: #2CCDC5;
+
+$color-primary: #FF207A;
+$color-secondary: #FFC72A;
+$color-tertiary: $color-blue;
+$color-quaternary: $color-teal;
+
+$color-primary-link: $color-primary;
+$color-primary-link-hover: #FFC72A; //#e51c6d;
+
+$body-background-color: #f7f7f7; //#F1F1F2;
+$body-color: #2d3447;
+$footer-background-color: #222;
+
+$breakpoint-xs: 480px;
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 992px;
+$breakpoint-desktop: 1200px;
+
+$font-oswald: 'Oswald', sans-serif; // tight
+$font-lato: 'Lato', sans-serif; // wider
+$font-source: 'Source Sans Pro', sans-serif;
+
+$font-title: $font-oswald;
+// $font-body: $font-lato;
+
+// $font-body: $font-merriweather;
+// $font-body: $font-source;

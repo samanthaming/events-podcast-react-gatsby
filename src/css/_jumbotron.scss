@@ -1,0 +1,71 @@
+// Parent
+.jumbotron.podcast-banner {
+  background: $body-background-color; // #FFF6CC; yellow
+  border-radius: 0;
+  margin-top: -21px;
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
+
+// Title
+.jumbotron.podcast-banner .jumbotron-title {
+  font-size: 56px;
+  margin-top: 0;
+
+  a {
+    color: #333; // #00CC00; green
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 50px;
+  }
+}
+
+// Paragraph
+.jumbotron.podcast-banner p {
+
+  margin-bottom : 20px;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 938px;
+  }
+}
+
+// Podcast Links
+.jumbotron.podcast-banner .podcast-links {
+  margin-bottom: 0;
+
+  & > li > a {
+    color: $color-primary-link;
+    display: block;
+    margin: 0 8px;
+    font-size: 30px;
+    padding: 0 8px;
+
+    &:hover {
+      color: $color-primary-link-hover;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-xs) {
+    & > li:first-child > a {
+      padding-left: 0;
+      margin-left: 0;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-xs) {
+    margin-top: -10px;
+    & > li > a{
+      padding-top: 5px;
+      margin-top: 5px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+// ---------------------------
+// General Layout for Podcast
+// ---------------------------
+
+.podcast-heading {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h1, h2, p {margin: 0;} // remove spacing
+
+  .podcast-title {
+    @media screen and (max-width: $breakpoint-mobile) {
+      margin-bottom: 5px;
+    }
+  }
+
+  .podcast-time {
+    font-family: $font-title;
+  }
+}
+
+.podcast-image {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.podcast-player {
+  margin-bottom: 20px;
+}
+
+.podcast-shownotes {
+  h3 {
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,77 @@
+.about-block {
+  max-width: 500px;
+  margin: 0 auto 70px;
+}
+
+.about-info {
+  padding: 0 5px;
+}
+
+.about-info hr {
+  margin: 15px -3px 25px -3px;
+  border-top-color: $color-quaternary;
+  border-width: 5px;
+}
+
+.about-info .title {
+  font-size: 26px;
+  color: $color-tertiary;
+  text-transform: uppercase;
+}
+
+.about-info p {
+  font-size: 16px;
+}
+
+.about-media {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.about-bio {
+  margin-top: 10px;
+}
+
+.about-bio-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.about-links {
+  text-align: center;
+  a {
+    color: #83b3be;
+    &:hover {
+      color: #5492a0;
+    }
+  }
+}
+
+.about-links .podcast-links {
+  margin-top: 25px;
+  &>li>a {
+    font-size: 30px;
+    padding: 0 8px;
+    margin: 0 8px;
+  }
+
+  @media screen and (max-width: $breakpoint-xs) {
+    margin-top: 18px;
+    & > li > a{
+      display: block;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      margin-top: 3px;
+      margin-bottom: 3px;
+    }
+  }
+}
+
+.about-links .host-social-links {
+  margin-top: 10px;
+  &>li>a {
+    font-size: 26px;
+    padding: 0 8px;
+    margin: 0 5px;
+  }
+}

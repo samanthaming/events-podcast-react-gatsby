@@ -1,0 +1,60 @@
+.community-partners {
+  margin-top: 75px;
+  background: white;// #7BC8D8; greenish // #F9DB79; ice cream yellow
+  padding: 30px 10px 80px;
+  margin-bottom: -70px;
+  border-top: 15px solid #7BC8D8;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    padding: 30px 60px 130px;
+  }
+}
+
+.community-partners .title {
+  text-transform: uppercase;
+  color: #2F2E2E; // #F1F1F2;
+  font-size: 24px;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+
+  span {
+    color: $color-primary;
+    font-size: 26px;
+  }
+}
+
+.community-partners ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding-left: 0;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $breakpoint-mobile) {
+    & > li:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.community-partners li {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  margin: 0 50px;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+}
+
+.community-partners img {
+  width: 100%;
+}
+
+.community-partners .cp-horizontal {
+  width: 160px;
+}

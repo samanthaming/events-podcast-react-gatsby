@@ -1,0 +1,25 @@
+.events-aside .podcast-links{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  margin-top: 15px;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: $breakpoint-desktop) and (min-width: $breakpoint-xs) {
+    justify-content: flex-start;
+  }
+
+  a {
+    color: $color-primary;
+    font-size: 28px;
+
+    @media screen and (max-width: $breakpoint-desktop) and (min-width: $breakpoint-xs) {
+      padding-right: 20px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.events-aside .panel-info p {
+  font-size: 15px;
+}

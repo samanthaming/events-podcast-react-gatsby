@@ -1,0 +1,90 @@
+// ----------------------------------
+// GENERAL / OVERRIDE BOOTSTRAP
+// ----------------------------------
+abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, video {
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: $footer-background-color;
+  color: $body-color;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font-title;
+  }
+}
+
+hr {
+  border-top-color: #ddd;
+}
+
+.section-title {
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 0 5px;
+  margin: 0 0 40px;
+}
+
+.section-hr {
+  margin-top: 30px;
+}
+
+.section-hr-tall {
+  margin-top: 50px;
+}
+
+.see-all {
+  margin-top: 30px;
+  text-align: center;
+
+  a {
+    font-size: 18px;
+    color: $color-primary;
+  }
+}
+
+// ****** Panel ******
+$panel-border: #ddd;
+
+.panel {
+  border-radius: 0;
+}
+.panel-heading {
+  border-radius: 0;
+  text-transform: uppercase;
+}
+.panel-default>.panel-heading {
+  background-color: #e5e5e5;
+  border-color: $panel-border;
+}
+.panel-default {
+  border-color: $panel-border;
+}
+
+.panel-loud-secondary {
+  border-color: #ddd;
+
+  .panel-heading {
+    background: $color-secondary;
+    border-color: darken($color-secondary, 5%);
+  }
+}
+
+.panel-info{
+  padding-left: 10px;
+  padding-right: 10px;
+
+  h3 {
+    margin-top: 0;
+    font-size: 30px;
+  }
+}
+
+// ----------------------------------
+// LAYOUT
+// ----------------------------------
+.body-wrap {
+  background: $body-background-color;
+  min-height: calc(100vh - 60px);
+  padding-bottom: 50px;
+}

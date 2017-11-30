@@ -1,0 +1,26 @@
+// Panel Heading
+.new-episode .panel-heading {
+
+  .podcast-title {
+    color: #333;
+
+    a {
+      margin-left: 5px;
+      color: #222;
+    }
+  }
+
+  .podcast-time {
+    color: #737373;
+    font-size: 14px;
+  }
+}
+
+// Podcast Show Notes
+.new-episode .panel-body {
+  padding: 20px 5%;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    padding: 15px;
+  }
+}
