@@ -2,16 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
+import TopNav from './TopNav';
+import "font-awesome/scss/font-awesome.scss";
 
-import '../css/typography.css';
+// import '../css/typography.css';
+import '../css/styles.scss';
 
 export default class Template extends React.Component {
   static propTypes = {
     children: PropTypes.func,
   };
 
+
+
   render() {
-    const { location } = this.props;
+    console.log(this.props);
+    const { location, data } = this.props;
 
     const isRoot = location.pathname === '/';
 
@@ -24,6 +30,7 @@ export default class Template extends React.Component {
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
+        <TopNav siteData={data.site.siteMetadata} />
         <div
           style={{
             background: `rebeccapurple`,
@@ -64,3 +71,18 @@ export default class Template extends React.Component {
     );
   }
 }
+
+export const query = graphql`
+query TemplateQuery {
+  site {
+    siteMetadata {
+      title
+      site {
+        twitter
+        facebook
+        instagram
+      }
+    }
+  }
+}
+`

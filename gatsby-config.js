@@ -7,7 +7,7 @@ module.exports = {
   // pathPrefix: process.env.CI ? `/${name}` : `/`,
   pathPrefix: config.pathPrefix,
   siteMetadata: {
-    author: 'Samantha Ming',
+    author: `Samantha Ming`,
     title: `Events Podcast`,
     site: config,
   },
