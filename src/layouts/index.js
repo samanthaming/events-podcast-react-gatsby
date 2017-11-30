@@ -4,8 +4,6 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import TopNav from './TopNav';
 import "font-awesome/scss/font-awesome.scss";
-
-// import '../css/typography.css';
 import '../css/styles.scss';
 
 export default class Template extends React.Component {
@@ -13,12 +11,8 @@ export default class Template extends React.Component {
     children: PropTypes.func,
   };
 
-
-
   render() {
-    console.log(this.props);
     const { location, data } = this.props;
-
     const isRoot = location.pathname === '/';
 
     return (
