@@ -1,7 +1,7 @@
 // const { name } = require('./package.json');
 const config = require("./data/SiteConfig");
 
-const pathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
+// const pathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
 
 module.exports = {
   // pathPrefix: process.env.CI ? `/${name}` : `/`,

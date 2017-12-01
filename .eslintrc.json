@@ -5,7 +5,8 @@
     "react/prefer-stateless-function": "off",
     "react/no-danger": "off",
     "react/jsx-filename-extension": 0,
-    "react/forbid-prop-types": 0
+    "react/forbid-prop-types": 0,
+    "react/no-array-index-key)": 0
   },
   "settings": {
     "import/core-modules": []
