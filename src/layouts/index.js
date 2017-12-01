@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import TopNav from './TopNav';
+import Footer from './Footer';
 import "font-awesome/scss/font-awesome.scss";
 import '../css/styles.scss';
 
@@ -24,43 +25,11 @@ export default class Template extends React.Component {
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
-        <TopNav siteData={data.site.siteMetadata} />
-        <div
-          style={{
-            background: `rebeccapurple`,
-            marginBottom: `1.45rem`,
-          }}
-        >
-          <div
-            style={{
-              margin: `0 auto`,
-              maxWidth: 960,
-              padding: isRoot ? `1.45rem 1.0875rem` : `1rem 0.75rem`,
-            }}
-          >
-            <h1 style={{ margin: 0, fontSize: isRoot ? `2.5rem` : `2rem` }}>
-              <Link
-                to="/"
-                style={{
-                  color: 'white',
-                  textDecoration: 'none',
-                }}
-              >
-                Gatsby Blog
-              </Link>
-            </h1>
-          </div>
-        </div>
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
+        <div className="body-wrap">
+          <TopNav siteData={data.site.siteMetadata} />
           {this.props.children()}
         </div>
+        <Footer data={data.site.siteMetadata.site} />
       </div>
     );
   }
@@ -75,6 +44,10 @@ query TemplateQuery {
         twitter
         facebook
         instagram
+        rss
+        itunes
+        googlePlay
+        soundcloud
       }
     }
   }
