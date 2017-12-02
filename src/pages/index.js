@@ -1,38 +1,25 @@
 import React from 'react';
-import GatsbyLink from 'gatsby-link';
-import Helmet from 'react-helmet';
-
-import Link from '../components/Link';
+import PropTypes from "prop-types";
+import Episode from '../components/Episode';
 
 import '../css/index.css';
 
 export default function Index({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
   return (
-    <div className="blog-posts">
+    <div className="container episode-list">
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
-        .map(({ node: post }) => {
-          return (
-            <div className="blog-post-preview" key={post.id}>
-              <h1 className="title">
-                <GatsbyLink to={post.frontmatter.path}>
-                  {post.frontmatter.title}
-                </GatsbyLink>
-              </h1>
-              <h2 className="date">
-                {post.frontmatter.date}
-              </h2>
-              <p>
-                {post.excerpt}
-              </p>
-              <Link to={post.frontmatter.path}>Read more</Link>
-            </div>
-          );
-        })}
+        .map(({ node: post }) => (
+          <Episode key={post.id} {...post.frontmatter} />
+        ))}
     </div>
   );
 }
+
+Index.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export const pageQuery = graphql`
   query IndexQuery {
@@ -45,6 +32,8 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             path
+            description
+            soundcloud
           }
         }
       }
