@@ -28,7 +28,7 @@ const Episode = props => {
 };
 
 Episode.propTypes = {
-  description: PropTypes.string,
+  description: PropTypes.string.isRequired,
   soundcloud: PropTypes.number.isRequired,
   path: PropTypes.string.isRequired
 };

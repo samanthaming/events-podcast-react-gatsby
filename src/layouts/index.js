@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import TopNav from './TopNav';
 import Footer from './Footer';
 import CommunityPartner from '../components/CommunityPartner';
+import Jumbotron from '../components/Jumbotron';
 import "font-awesome/scss/font-awesome.scss";
 import '../css/styles.scss';
 
@@ -28,6 +29,11 @@ export default class Template extends React.Component {
         />
         <div className="body-wrap">
           <TopNav siteData={data.site.siteMetadata} />
+          <div className="row">
+            <div className="container-fluid">
+              <Jumbotron data={data.site.siteMetadata.site} />
+            </div>
+          </div>
           {this.props.children()}
           <CommunityPartner />
         </div>
@@ -50,6 +56,7 @@ query TemplateQuery {
         itunes
         googlePlay
         soundcloud
+        siteDescription
       }
     }
   }
