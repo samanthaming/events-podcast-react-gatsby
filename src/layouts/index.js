@@ -29,11 +29,6 @@ export default class Template extends React.Component {
         />
         <div className="body-wrap">
           <TopNav siteData={data.site.siteMetadata} />
-          <div className="row">
-            <div className="container-fluid">
-              <Jumbotron data={data.site.siteMetadata.site} />
-            </div>
-          </div>
           {this.props.children()}
           <CommunityPartner />
         </div>
