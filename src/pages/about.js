@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import AboutPodcast from '../components/AboutPodcast';
-
+import AboutMe from '../components/AboutMe';
 
 const About = ({data}) => {
   const { siteMetadata } = data.site;
@@ -8,6 +9,7 @@ const About = ({data}) => {
     <div className="container">
       <div className="col-lg-8">
         <AboutPodcast {...siteMetadata} />
+        <AboutMe {...siteMetadata} />
       </div>
       <div className="col-lg-4">
 
@@ -29,10 +31,15 @@ query AboutQuery {
         googlePlay
         soundcloud
         siteDescription
+        hostInstagram
+        hostTwitter
       }
     }
   }
 }
 `
+About.propTypes = {
+  data: PropTypes.object.isRequired
+};
 
 export default About;
