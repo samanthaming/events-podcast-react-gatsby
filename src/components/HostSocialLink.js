@@ -8,7 +8,7 @@ const HostSocialLink = ({ data }) => {
   };
 
   return (
-    <ul className="list-inline podcast-links">
+    <ul className="list-inline host-social-links">
       {Object.entries(podcastList).map(([key, value]) => (
         <li key={key}>
           <a href={data[key]}>
