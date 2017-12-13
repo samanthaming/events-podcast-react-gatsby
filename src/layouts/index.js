@@ -6,7 +6,6 @@ import TopNav from './TopNav';
 import Footer from './Footer';
 import CommunityPartner from '../components/CommunityPartner';
 import Jumbotron from '../components/Jumbotron';
-import "font-awesome/scss/font-awesome.scss";
 import '../css/styles.scss';
 
 export default class Template extends React.Component {
