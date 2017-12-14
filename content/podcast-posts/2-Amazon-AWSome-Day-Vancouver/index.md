@@ -1,5 +1,5 @@
 ---
-path: "/2-Amazon-AWSome-Day-Vancouver.html"
+path: "/episode/2-Amazon-AWSome-Day-Vancouver.html"
 title: "Amazon AWSome Day Vancouver"
 tags: ["business"]
 description: "In this episode, I attend a free event by Amazon where their experts introduced AWS services for compute, storage, database and networking."

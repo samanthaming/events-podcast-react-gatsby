@@ -1,5 +1,5 @@
 ---
-path: "/9-Digital-Marketing.html"
+path: "/episode/9-Digital-Marketing.html"
 title: "Digital Marketing"
 tags: ["business"]
 description: "In this episode, SEO Specialist Barrett Wilson shares best practices and tips for Digital Marketing and how that can improve your WordPress site."

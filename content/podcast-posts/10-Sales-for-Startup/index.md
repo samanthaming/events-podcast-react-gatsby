@@ -1,12 +1,12 @@
 ---
-path: "/11-Making-the-Pitch.html"
-title: "Making the Pitch"
+path: "/episode/10-Sales-for-Startup.html"
+title: "Sales for Startup"
 tags: ["business"]
-description: "What goes into a winning pitch? Augurex founder and 2007 BCIC-New Ventures Competition winner, Norma Biln, shares her tips for refining and perfecting your pitch."
-time: 12
-episode: 11
+description: "Infobip’s Director of North American Sales Christene Best shares the essentials in developing a startup sales strategy. This episode will cover the language of sales, the role of sales, and how to drive sales."
+time: 13
+episode: 10
 artwork: "cover-events-podcast"
-soundcloud: 331804098
+soundcloud: 328587828
 ---
 What goes into a winning pitch? Augurex founder and 2007 BCIC-New Ventures Competition winner, Norma Biln, shares her tips for refining and perfecting your pitch.
 
@@ -20,15 +20,15 @@ What goes into a winning pitch? Augurex founder and 2007 BCIC-New Ventures Compe
 
 ### SPEAKER
 Norma Biln, Founder & CEO, Augurex  
-https://twitter.com/nbiln
-
+https://twitter.com/nbiln 
+ 
 ### ORGANIZER
 
 New Ventures BC  
-http://www.newventuresbc.com  
+http://www.newventuresbc.com   
 https://www.facebook.com/newventuresbc  
-https://www.youtube.com/user/bcicnewventures
-
+https://www.youtube.com/user/bcicnewventures   
+ 
 ### MUSIC
 Punch by DJ Quads https://soundcloud.com/aka-dj-quads  
 Petrichor by Julian Avila https://soundcloud.com/julian_avila  

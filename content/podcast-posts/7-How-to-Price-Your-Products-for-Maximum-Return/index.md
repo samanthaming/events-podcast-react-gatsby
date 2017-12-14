@@ -1,5 +1,5 @@
 ---
-path: "/7-How-to-Price-Your-Products-for-Maximum-Return.html"
+path: "/episode/7-How-to-Price-Your-Products-for-Maximum-Return.html"
 title: "How to Price Your Products for Maximum Return"
 tags: ["business"]
 description: "In this episode, I learn about pricing, including customer values, value-based pricing and pricing for maximum return."

@@ -4,6 +4,18 @@ const createTagPages = (createPage, edges) => {
   const tagTemplate = path.resolve(`src/templates/tags.js`);
   const posts = {};
 
+  /*
+    posts = {
+      business: [
+        {
+          "id": '/.../1-Pitching-101/index.md absPath of file >>> MarkdownRemark'
+          "frontmatter" {}
+        },
+        {}
+      ]
+    }
+  */
+
   edges
     .forEach(({ node }) => {
       if (node.frontmatter.tags) {
@@ -43,7 +55,9 @@ const createTagPages = (createPage, edges) => {
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
-  const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
+  const podcastPostTemplate = path.resolve(`src/templates/blog-post.js`);
+  const eventPostTemplate = path.resolve(`src/templates/blog-event.js`);
+
   return graphql(`{
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
@@ -60,11 +74,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             date
             title
             tags
-            description
-            time
-            episode
-            artwork
-            soundcloud
           }
         }
       }
@@ -79,18 +88,42 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
     createTagPages(createPage, posts);
 
-    // Create pages for each markdown file.
-    posts.forEach(({ node }, index) => {
-      const prev = index === 0 ? false : posts[index - 1].node;
-      const next = index === posts.length - 1 ? false : posts[index + 1].node;
+    // Create podcast pages
+    const podcastPosts = posts.filter(({node}) => {
+      return node.frontmatter.path.includes(`/episode/`);
+    });
+
+    podcastPosts.forEach((edge, index) => {
+      const prev = index === 0 ? false : podcastPosts[index - 1].node;
+      const next = index === podcastPosts.length - 1 ? false : podcastPosts[index + 1].node;
+
       createPage({
-        path: node.frontmatter.path,
-        component: blogPostTemplate,
+        path: `${edge.node.frontmatter.path}`,
+        component: podcastPostTemplate,
         context: {
           prev,
           next
         }
-      });
+      })
+    });
+
+    // Create event pages
+    const eventPosts = posts.filter(({node}) => {
+      return node.frontmatter.path.includes(`/event/`);
+    });
+
+    eventPosts.forEach((edge, index) => {
+      const prev = index === 0 ? false : eventPosts[index - 1].node;
+      const next = index === eventPosts.length - 1 ? false : eventPosts[index + 1].node;
+
+      createPage({
+        path: `${edge.node.frontmatter.path}`,
+        component: eventPostTemplate,
+        context: {
+          prev,
+          next
+        }
+      })
     });
 
     return posts;

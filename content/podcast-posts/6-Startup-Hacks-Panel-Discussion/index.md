@@ -1,5 +1,5 @@
 ---
-path: "/6-Startup-Hacks-Panel-Discussion.html"
+path: "/episode/6-Startup-Hacks-Panel-Discussion.html"
 title: "Startup Hacks - Panel Discussion"
 tags: ["business"]
 description: "I attend Startup Hacks, an entrepreneurship business conference. Hear the stories of successful Real Founders and CEOs talk about their experience and provide authentic advice on how they built a successful brand and business."

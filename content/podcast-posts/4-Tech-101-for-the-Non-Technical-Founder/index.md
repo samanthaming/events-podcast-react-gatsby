@@ -1,7 +1,7 @@
 ---
-path: "/4-Tech-101-for-the-Non-Technical-Founder.html"
+path: "/episode/4-Tech-101-for-the-Non-Technical-Founder.html"
 title: "Tech 101 for the Non-Technical Founder"
-tags: ["business"]
+tags: ["business", "tech"]
 description: "In this episode I attend a meetup event by Spring Startup School for Entrepreneurs where a panel of tech industry leaders share their advice on how non-technical founders can better navigate in the world of tech."
 time: 14
 episode: 4

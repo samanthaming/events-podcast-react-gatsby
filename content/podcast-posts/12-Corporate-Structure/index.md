@@ -1,5 +1,5 @@
 ---
-path: "/12-Corporate-Structure.html"
+path: "/episode/12-Corporate-Structure.html"
 title: "Corporate Structure"
 tags: ["business"]
 description: "What are the initial corporate matters you need to consider in building your technology company? Fasken Martineau’s Steve Saville and Jonathan Conlin explain in this episode."

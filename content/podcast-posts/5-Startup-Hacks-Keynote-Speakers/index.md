@@ -1,5 +1,5 @@
 ---
-path: "/5-Startup-Hacks-Keynote-Speakers.html"
+path: "/episode/5-Startup-Hacks-Keynote-Speakers.html"
 title: "Startup Hacks - Keynote Speakers"
 tags: ["business"]
 description: "I attend Startup Hacks, an entrepreneurship business conference. Hear the stories of successful Real Founders and CEOs talk about their experience and provide authentic advice on how they built a successful brand and business."

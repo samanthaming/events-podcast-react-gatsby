@@ -1,5 +1,5 @@
 ---
-path: "/pitching-101.html"
+path: "/episode/pitching-101.html"
 date: "2017-04-12"
 title: "Pitching 101"
 tags: ["business"]

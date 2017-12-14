@@ -1,5 +1,5 @@
 module.exports = {
-  blogPostDir: "sample-posts",
+  blogPostDir: "podcast-posts",
   siteTitle: "Events Podcast",
   siteTitleAlt: "Events Podcast built by Samantha Ming",
   // siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.

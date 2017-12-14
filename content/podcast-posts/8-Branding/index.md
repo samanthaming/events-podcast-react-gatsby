@@ -1,5 +1,5 @@
 ---
-path: "/8-Branding.html"
+path: "/episode/8-Branding.html"
 title: "Branding"
 tags: ["business"]
 description: "In this episode, I attend a WordPress event where I learn about the best practices and tips for Branding."

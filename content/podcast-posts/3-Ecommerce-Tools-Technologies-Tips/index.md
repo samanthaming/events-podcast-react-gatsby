@@ -1,5 +1,5 @@
 ---
-path: "/3-Ecommerce-Tools-Technologies-Tips.html"
+path: "/episode/3-Ecommerce-Tools-Technologies-Tips.html"
 title: "Ecommerce Tools, Technologies, & Tips"
 tags: ["business"]
 description: "In this episode, I attend a meetup event by the Vancouver Web Design group where an expert lineup of speakers share their insights of the latest trends, techniques, and tools to ensure success for your ecommerce website."
