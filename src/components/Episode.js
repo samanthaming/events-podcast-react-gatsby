@@ -3,7 +3,7 @@ import GatsbyLink from "gatsby-link";
 import PropTypes from "prop-types";
 
 const Episode = props => {
-  const { description, soundcloud, path } = props;
+  const { description, soundcloud, path, title } = props;
   const soundcloudUrl = `https%3A//api.soundcloud.com/tracks/${soundcloud}&amp`;
   const soundcloudSrc = `https://w.soundcloud.com/player/?url=${
     soundcloudUrl
@@ -12,6 +12,7 @@ const Episode = props => {
     <div className="col-lg-6">
       <div className="well well-sm">
         <iframe
+          title={title}
           width="100%"
           height="166"
           scrolling="no"
@@ -30,7 +31,8 @@ const Episode = props => {
 Episode.propTypes = {
   description: PropTypes.string.isRequired,
   soundcloud: PropTypes.number.isRequired,
-  path: PropTypes.string.isRequired
+  path: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Episode;

@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import Episode from '../components/Episode';
 import Jumbotron from '../components/Jumbotron';
 
-import '../css/index.css';
-
 export default function Index({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
 

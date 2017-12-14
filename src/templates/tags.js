@@ -5,8 +5,6 @@ import TagsIcon from 'react-icons/lib/fa/tags';
 
 import Link from '../components/Link';
 
-import '../css/tags.css';
-
 export default function Tags({ pathContext }) {
   const { posts, post, tag } = pathContext;
   if (tag) {
