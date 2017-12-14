@@ -1,7 +1,7 @@
 ---
 path: "/pitching-101.html"
 date: "2017-04-12"
-title: "Pitching 101: Learn How to Present Your Business in a 90 sec. Elevator Pitch"
+title: "Pitching 101"
 tags: ["business"]
 description: "The Events Podcast is an audio blog about the tech events in Vancouver, Canada. In this episode, I attend Pitching 101: Learn how to present your business in a 90 sec. elevator pitch."
 time: 13

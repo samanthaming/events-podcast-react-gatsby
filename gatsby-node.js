@@ -56,10 +56,15 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           id
           timeToRead
           frontmatter {
-            date
             path
-            tags
+            date
             title
+            tags
+            description
+            time
+            episode
+            artwork
+            soundcloud
           }
         }
       }

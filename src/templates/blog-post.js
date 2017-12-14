@@ -1,45 +1,48 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import BackIcon from 'react-icons/lib/fa/chevron-left';
-import ForwardIcon from 'react-icons/lib/fa/chevron-right';
+import PropTypes from "prop-types";
 
-import Link from '../components/Link';
-import Tags from '../components/Tags';
+export default function Template(props) {
+  const { markdownRemark: post } = props.data;
 
-import '../css/blog-post.css';
-
-export default function Template({ data, pathContext }) {
-  const { markdownRemark: post } = data;
-  const { next, prev } = pathContext;
   return (
-    <div className="blog-post-container">
-      <Helmet title={`Gatsby Blog - ${post.frontmatter.title}`} />
-      <div className="blog-post">
-        <h1 className="title">
-          {post.frontmatter.title}
-        </h1>
-        <h2 className="date">
-          {post.frontmatter.date}
-        </h2>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
-        <Tags list={post.frontmatter.tags || []} />
-        <div className="navigation">
-          {prev &&
-            <Link className="link prev" to={prev.frontmatter.path}>
-              <BackIcon /> {prev.frontmatter.title}
-            </Link>}
-          {next &&
-            <Link className="link next" to={next.frontmatter.path}>
-              {next.frontmatter.title} <ForwardIcon />
-            </Link>}
+    <div className="container" id="episode-page">
+      <Helmet>
+        <title>{`${post.frontmatter.title} - Events Podcast`} </title>
+        <meta name="description" content={post.frontmatter.description} />
+      </Helmet>
+      <div className="col-lg-8 col-lg-offset-2">
+        <div className="podcast-heading">
+          <h1 className="podcast-title">
+            {`# ${post.frontmatter.episode} ${post.frontmatter.title}`}
+          </h1>
+          <p className="podcast-time">
+            {`${post.frontmatter.time} min listen`}
+          </p>
         </div>
+        <div className="podcast-player">
+          <iframe
+            title={post.frontmatter.title}
+            width="100%"
+            height="166"
+            scrolling="no"
+            frameBorder="no"
+            src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${post.frontmatter.soundcloud}&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false`}
+          />
+        </div>
+        <div className="podcast-shownotes" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <hr className="section-hr" />
+        <h6 className="section-title">
+          <a href="/">View More Episodes</a>
+        </h6>
       </div>
     </div>
   );
 }
+
+Template.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
@@ -50,6 +53,11 @@ export const pageQuery = graphql`
         path
         tags
         title
+        description
+        time
+        episode
+        artwork
+        soundcloud
       }
     }
   }
