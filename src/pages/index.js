@@ -47,7 +47,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
+    allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___episode]}) {
       edges {
         node {
           excerpt(pruneLength: 250)
