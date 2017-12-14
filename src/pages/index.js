@@ -45,7 +45,14 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___episode]}) {
+    allMarkdownRemark(
+      filter: {
+        frontmatter: {category: {ne: "event"}}
+      }
+      sort: {
+        order: DESC, fields: [frontmatter___episode]
+      }
+    ) {
       edges {
         node {
           excerpt(pruneLength: 250)
@@ -53,12 +60,8 @@ export const pageQuery = graphql`
           frontmatter {
             title
             path
-            date
-            parent
             description
-            time
             episode
-            artwork
             soundcloud
           }
         }
