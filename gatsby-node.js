@@ -4,18 +4,6 @@ const createTagPages = (createPage, edges) => {
   const tagTemplate = path.resolve(`src/templates/tags.js`);
   const posts = {};
 
-  /*
-    posts = {
-      business: [
-        {
-          "id": '/.../1-Pitching-101/index.md absPath of file >>> MarkdownRemark'
-          "frontmatter" {}
-        },
-        {}
-      ]
-    }
-  */
-
   edges
     .forEach(({ node }) => {
       if (node.frontmatter.tags) {

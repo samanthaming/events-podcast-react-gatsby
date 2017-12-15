@@ -1,9 +1,20 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 
 export default function EventTemplate(props) {
+  const { markdownRemark: post } = props.data;
+
   return (
     <div>
-      <h1>Hi I'm an event</h1>
+      <div className="container" style={{marginTop: '38px'}}>
+        <div className="row">
+          <div className="col-lg-8">
+
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }
+

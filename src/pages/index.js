@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from "prop-types";
 import Episode from '../components/Episode';
 import Jumbotron from '../components/Jumbotron';
+import CommunityPartner from '../components/CommunityPartner';
 
 export default function Index({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
@@ -20,6 +21,7 @@ export default function Index({ data }) {
             <Episode key={post.id} {...post.frontmatter} />
           ))}
       </div>
+      <CommunityPartner />
     </div>
   );
 }

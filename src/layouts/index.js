@@ -4,7 +4,6 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import TopNav from './TopNav';
 import Footer from './Footer';
-import CommunityPartner from '../components/CommunityPartner';
 import Jumbotron from '../components/Jumbotron';
 import '../css/styles.scss';
 
@@ -29,7 +28,6 @@ export default class Template extends React.Component {
         <div className="body-wrap">
           <TopNav siteData={data.site.siteMetadata} />
           {this.props.children()}
-          <CommunityPartner />
         </div>
         <Footer data={data.site.siteMetadata.site} />
       </div>
