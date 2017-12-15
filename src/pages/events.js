@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from "prop-types";
 import EventSchedule from '../components/EventSchedule';
 import PodcastCard from '../components/PodcastCard';
+import UpcomingEventCard from '../components/UpcomingEventCard';
 
 const Events = (props) => {
   const {allMarkdownRemark, site} = props.data;
   const {node: markdown} = allMarkdownRemark.edges[0];
-  const {title, site: data} = site.siteMetadata;
+  const {title, email, domain, site: data} = site.siteMetadata;
 
   return (
     <div className="container" style={{marginTop: '38px'}}>
@@ -16,6 +17,7 @@ const Events = (props) => {
         </div>
         <div className="col-lg-4 events-aside">
           <PodcastCard title={title} data={data} description={data.siteDescription} />
+          <UpcomingEventCard email={email} domain={domain} />
         </div>
       </div>
     </div>
@@ -27,6 +29,8 @@ query EventsQuery {
   site {
     siteMetadata {
       title
+      email
+      domain
       site {
         rss
         stitcher

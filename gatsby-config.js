@@ -9,6 +9,8 @@ module.exports = {
   siteMetadata: {
     author: `Samantha Ming`,
     title: `Events Podcast`,
+    email: `eventspodcast@gmail.com`,
+    domain: `EventsPodcast.ca`,
     site: config,
   },
   plugins: [

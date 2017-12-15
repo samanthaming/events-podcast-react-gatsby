@@ -21,7 +21,7 @@ const About = ({data}) => {
       </div>
       <div className="col-lg-4">
         <div className="about-aside">
-          <ContactUsCard email={siteMetadata.site.email}/>
+          <ContactUsCard email={siteMetadata.email}/>
           <FollowUsCard social={socialLinks}/>
         </div>
       </div>
@@ -33,6 +33,7 @@ export const query = graphql `
 query AboutQuery {
   site {
     siteMetadata {
+      email
       site {
         twitter
         facebook
@@ -44,7 +45,6 @@ query AboutQuery {
         siteDescription
         hostInstagram
         hostTwitter
-        email
       }
     }
   }
