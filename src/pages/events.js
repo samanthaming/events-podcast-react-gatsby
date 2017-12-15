@@ -1,15 +1,21 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import EventSchedule from '../components/EventSchedule';
+import PodcastCard from '../components/PodcastCard';
 
 const Events = (props) => {
-  const {node: data} = props.data.allMarkdownRemark.edges[0];
+  const {allMarkdownRemark, site} = props.data;
+  const {node: markdown} = allMarkdownRemark.edges[0];
+  const {title, site: data} = site.siteMetadata;
 
   return (
-    <div className="container">
+    <div className="container" style={{marginTop: '38px'}}>
       <div className="row">
         <div className="col-lg-8">
-          <EventSchedule html={data.html} type={`new`} title={data.frontmatter.title} />
+          <EventSchedule html={markdown.html} type={`new`} title={markdown.frontmatter.title} />
+        </div>
+        <div className="col-lg-4 events-aside">
+          <PodcastCard title={title} data={data} description={data.siteDescription} />
         </div>
       </div>
     </div>
@@ -22,10 +28,8 @@ query EventsQuery {
     siteMetadata {
       title
       site {
-        twitter
-        facebook
-        instagram
         rss
+        stitcher
         itunes
         googlePlay
         soundcloud
@@ -44,13 +48,6 @@ query EventsQuery {
         html
         frontmatter {
           title
-          path
-          description
-          time
-          episode
-          artwork
-          soundcloud
-          parent
           date
           category
         }
@@ -59,5 +56,9 @@ query EventsQuery {
   }
 }
 `;
+
+Events.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export default Events;
