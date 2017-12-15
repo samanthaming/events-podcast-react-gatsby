@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import EventSchedule from '../components/EventSchedule';
 import PodcastCard from '../components/PodcastCard';
 import UpcomingEventCard from '../components/UpcomingEventCard';
+import VanTechPodCard from '../components/VanTechPodCard';
 
 const Events = (props) => {
   const {allMarkdownRemark, site} = props.data;
@@ -18,6 +19,7 @@ const Events = (props) => {
         <div className="col-lg-4 events-aside">
           <PodcastCard title={title} data={data} description={data.siteDescription} />
           <UpcomingEventCard email={email} domain={domain} />
+          <VanTechPodCard />
         </div>
       </div>
     </div>
