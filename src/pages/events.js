@@ -4,6 +4,7 @@ import EventSchedule from '../components/EventSchedule';
 import PodcastCard from '../components/PodcastCard';
 import UpcomingEventCard from '../components/UpcomingEventCard';
 import VanTechPodCard from '../components/VanTechPodCard';
+import PreviousEvents from '../components/PreviousEvents';
 
 const Events = (props) => {
   const {allMarkdownRemark, site} = props.data;
@@ -11,17 +12,20 @@ const Events = (props) => {
   const {title, email, domain, site: data} = site.siteMetadata;
 
   return (
-    <div className="container" style={{marginTop: '38px'}}>
-      <div className="row">
-        <div className="col-lg-8">
-          <EventSchedule html={markdown.html} type={`new`} title={markdown.frontmatter.title} />
-        </div>
-        <div className="col-lg-4 events-aside">
-          <PodcastCard title={title} data={data} description={data.siteDescription} />
-          <UpcomingEventCard email={email} domain={domain} />
-          <VanTechPodCard />
+    <div>
+      <div className="container" style={{marginTop: '38px'}}>
+        <div className="row">
+          <div className="col-lg-8">
+            <EventSchedule html={markdown.html} type={`new`} title={markdown.frontmatter.title} />
+          </div>
+          <div className="col-lg-4 events-aside">
+            <PodcastCard title={title} data={data} description={data.siteDescription} />
+            <UpcomingEventCard email={email} domain={domain} />
+            <VanTechPodCard />
+          </div>
         </div>
       </div>
+      <PreviousEvents events={allMarkdownRemark.edges.slice(1)} />
     </div>
   );
 }
@@ -46,7 +50,7 @@ query EventsQuery {
   allMarkdownRemark(
     filter: {frontmatter: {category: {eq: "event"}}}
     sort: {fields: [frontmatter___date], order: DESC}
-    limit: 1
+    limit: 3
   ) {
     edges {
       node {
@@ -56,6 +60,7 @@ query EventsQuery {
           title
           date
           category
+          path
         }
       }
     }

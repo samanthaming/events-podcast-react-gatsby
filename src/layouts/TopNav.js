@@ -35,7 +35,7 @@ const TopNav = ({ siteData }) => (
 
     <ul className="nav navbar-nav navbar-right navbar-menu">
       <li>
-        <a href="">Events</a>
+        <a href="/events/">Events</a>
       </li>
       <li>
         <a href="/about/">About</a>
