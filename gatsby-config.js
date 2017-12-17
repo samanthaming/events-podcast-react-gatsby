@@ -51,5 +51,6 @@ module.exports = {
         precision: 8,
       },
     },
+    `gatsby-plugin-netlify`, // make sure to put last in the array
   ],
 }
