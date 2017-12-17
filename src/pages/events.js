@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import Helmet from 'react-helmet';
 import EventSchedule from '../components/EventSchedule';
 import PodcastCard from '../components/PodcastCard';
 import UpcomingEventCard from '../components/UpcomingEventCard';
@@ -13,6 +14,13 @@ const Events = (props) => {
 
   return (
     <div>
+      <Helmet>
+        <title>{`Vancouver Tech Events: ${title} - Events Podcast`}</title>
+        <meta
+          name="description"
+          content="Schedule of upcoming Tech Events in Vancouver, BC, Canada. Don't miss out on these events with our weekly picks."
+        />
+      </Helmet>
       <div className="container" style={{marginTop: '38px'}}>
         <div className="row">
           <div className="col-lg-8">

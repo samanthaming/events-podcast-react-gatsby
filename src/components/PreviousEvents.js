@@ -19,8 +19,8 @@ const PreviousEvents = (props) => {
             <ul className="event-list">
               {
                 events.map(({node}) => (
-                  <li>
-                    <a href="{node.frontmatter.path}">
+                  <li key={node.id}>
+                    <a href={node.frontmatter.path}>
                       {node.frontmatter.title}
                     </a>
                   </li>

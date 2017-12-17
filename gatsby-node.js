@@ -108,8 +108,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         path: `${edge.node.frontmatter.path}`,
         component: eventPostTemplate,
         context: {
+          eventPosts,
           prev,
-          next
+          next,
         }
       })
     });
