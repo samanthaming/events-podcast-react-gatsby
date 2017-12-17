@@ -1,23 +1,13 @@
-# gatsby-blog-starter-kit
+# Events Podcast Static Website
 
-[![Build Status](https://travis-ci.org/DSchau/gatsby-blog-starter-kit.svg?branch=master)](https://travis-ci.org/DSchau/gatsby-blog-starter-kit) [![Greenkeeper badge](https://badges.greenkeeper.io/DSchau/gatsby-blog-starter-kit.svg)](https://greenkeeper.io/)
+Events Podcast is a show that summaries the best Tech and Business talks at Vancouver Events.
 
-Use this starter kit to jump start (or use as a reference) a great blog with [gatsby][gatsby]
+This is the official repo built and designed by [Samantha Ming](https://www.linkedin.com/in/samanthaming/)
 
-![Blog example](./assets/gatsby-blog-starter-kit.png)
+## Technologies used
 
-## Features
-
-1. Blog post listing with previews for each blog post
-1. Navigation between posts with a previous/next post button
-1. Tags and tag navigation
-1. Responsive images via [gatsby-remark-images][gatsby-remark-images]
-
-## Set up
-
-1. Clone this repo
-1. `yarn`
-1. `yarn start`
-
-[gatsby]: https://www.gatsbyjs.org/
-[gatsby-remark-images]: https://www.gatsbyjs.org/docs/packages/gatsby-remark-images/
+- React JS
+- Gatsby JS 
+- Yarn
+- JavaScript
+- HTML/SASS
