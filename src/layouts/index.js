@@ -19,10 +19,9 @@ export default class Template extends React.Component {
     return (
       <div>
         <Helmet
-          title="Gatsby Default (Blog) Starter"
+          title="Home - Events Podcast"
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: 'Events Podcast is a show that summaries the best Tech and Business talks at Vancouver Events.' },
           ]}
         />
         <div className="body-wrap">

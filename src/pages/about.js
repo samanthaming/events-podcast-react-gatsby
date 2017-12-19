@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import Helmet from 'react-helmet';
 import AboutPodcast from '../components/AboutPodcast';
 import AboutMe from '../components/AboutMe';
 import ContactUsCard from '../components/ContactUsCard';
@@ -15,6 +16,9 @@ const About = ({data}) => {
 
   return (
     <div className="container">
+      <Helmet>
+        <title>{`About - Events Podcast`}</title>
+      </Helmet>
       <div className="col-lg-8">
         <AboutPodcast {...siteMetadata}/>
         <AboutMe {...siteMetadata}/>
