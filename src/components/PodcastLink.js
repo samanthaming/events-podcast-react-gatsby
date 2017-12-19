@@ -12,10 +12,10 @@ const PodcastLink = ({ data }) => {
 
   return (
     <ul className="list-inline podcast-links">
-      {Object.entries(podcastList).map(([key, value]) => (
+      {Object.keys(podcastList).map((key) => (
         <li key={key}>
           <a href={data[key]}>
-            <i className={`fa fa-${value}`} aria-hidden="true" />
+            <i className={`fa fa-${podcastList[key]}`} aria-hidden="true" />
           </a>
         </li>
       ))}

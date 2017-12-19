@@ -5,14 +5,15 @@ const HostSocialLink = ({ data }) => {
   const podcastList = {
     hostInstagram: "instagram",
     hostTwitter: "twitter",
+    hostGithub: "github",
   };
 
   return (
     <ul className="list-inline host-social-links">
-      {Object.entries(podcastList).map(([key, value]) => (
+      {Object.keys(podcastList).map(key => (
         <li key={key}>
           <a href={data[key]}>
-            <i className={`fa fa-${value}`} aria-hidden="true" />
+            <i className={`fa fa-${podcastList[key]}`} aria-hidden="true" />
           </a>
         </li>
       ))}

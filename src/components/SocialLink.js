@@ -5,9 +5,9 @@ const SocialLink = prop => {
 
   return (
     <ul className="list-inline social-links">
-      {Object.entries(social).map(([key, url]) => (
+      {Object.keys(social).map((key) => (
         <li key={key}>
-          <a href={url} title={`Follow us on ${key.toUpperCase()}`}>
+          <a href={social[key]} title={`Follow us on ${key.toUpperCase()}`}>
             <i className={`fa fa-${key}`} />
           </a>
         </li>

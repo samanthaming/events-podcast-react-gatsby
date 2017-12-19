@@ -16,4 +16,5 @@ module.exports = {
   soundcloud: "https://soundcloud.com/eventspodcast",
   hostInstagram: "https://www.instagram.com/samanthaming/",
   hostTwitter: "https://twitter.com/ming_samantha/",
+  hostGithub: "https://github.com/samanthaming/",
 };
