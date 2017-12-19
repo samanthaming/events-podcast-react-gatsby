@@ -1,4 +1,3 @@
-// const { name } = require('./package.json');
 const config = require("./data/SiteConfig");
 
 // const pathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;

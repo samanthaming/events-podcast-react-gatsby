@@ -1,4 +1,4 @@
-# Events Podcast Static Website
+# Events Podcast Website
 
 Events Podcast is a show that summaries the best Tech and Business talks at Vancouver Events.
 
