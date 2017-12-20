@@ -12,11 +12,11 @@ const AboutMe = (props) => {
         <h2 className="title">About Me</h2>
         <hr />
         <p>Samantha is the creator and host of the Events Podcast. Her 5 favourite
-          podcasts are
-          <a href="http://www.cbc.ca/radio/undertheinfluence">Under The Influence</a>,
-          <a href="https://gimletmedia.com/science-vs/">Science Vs</a>,
-          <a href="http://www.npr.org/podcasts/510289/planet-money">Planet Money</a>,
-          <a href="http://www.npr.org/podcasts/510313/how-i-built-this">How I Built This</a>, and the
+          podcasts are&nbsp;
+          <a href="http://www.cbc.ca/radio/undertheinfluence">Under The Influence</a>,&nbsp;
+          <a href="https://gimletmedia.com/science-vs/">Science Vs</a>,&nbsp;
+          <a href="http://www.npr.org/podcasts/510289/planet-money">Planet Money</a>,&nbsp;
+          <a href="http://www.npr.org/podcasts/510313/how-i-built-this">How I Built This</a>, and the&nbsp;
           <a href="https://www.garyvaynerchuk.com/podcast/">GaryVee Audio Experience</a>.
           Beside being a podcaster, she is a Front-End Web Developer who loves all things
           tech.

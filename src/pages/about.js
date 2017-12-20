@@ -49,6 +49,7 @@ query AboutQuery {
         siteDescription
         hostInstagram
         hostTwitter
+        hostGithub
       }
     }
   }
