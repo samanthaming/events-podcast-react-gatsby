@@ -1,4 +1,7 @@
 const config = require("./data/SiteConfig");
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+});
 
 // const pathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
 
@@ -48,6 +51,14 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         precision: 8,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `${process.env.GATSBY_GTA}`,
+        // Puts tracking script in the head instead of the body
+        head: false,
       },
     },
     `gatsby-plugin-netlify`, // make sure to put last in the array

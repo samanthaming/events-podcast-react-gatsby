@@ -15,6 +15,6 @@ module.exports = {
   googlePlay: "https://play.google.com/music/m/I6x2q6h4k4mbgg3a4nrke5gfqva?t=Events_Podcast",
   soundcloud: "https://soundcloud.com/eventspodcast",
   hostInstagram: "https://www.instagram.com/samanthaming/",
-  hostTwitter: "https://twitter.com/ming_samantha/",
+  hostTwitter: "https://twitter.com/samantha_ming/",
   hostGithub: "https://github.com/samanthaming/events-podcast-react-gatsby",
 };
